@@ -1,6 +1,7 @@
 var app = angular.module('userProfiles');
 
 app.controller('MainController', function($scope, mainService) { //defining mainController, giving it parameters of $scopr and our service
+  
   $scope.getUsers = function() {         //getUsers is equal to function
     mainService.getUsers().then(function(response) {   //.then initiates the promise and once the promise object is received, the function runs.
       $scope.users = response.data.data;      //users is equal the response from $http request 
